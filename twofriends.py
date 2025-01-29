@@ -1,10 +1,10 @@
-# https://codeforces.com/problemset/problem/1968/B
+# https://codeforces.com/problemset/problem/1969/A
 
 import sys
 import os
 import math
 
-x
+
 def is_online_judge():
     return os.getenv("ONLINE_JUDGE") is not None  # Some OJs set this
 
