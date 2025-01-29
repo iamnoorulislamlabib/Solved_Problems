@@ -22,16 +22,22 @@ def redirect_io():
 
 
 def solve():
-   _ = input()
-   lst = list(map(int,input().split()))
-   ans = 3
-   for i in range(len(lst)) :
-       x = i+1
-       y = lst[lst[i]-1]
-       if x == y :
-           ans = 2
-           break
-   print(ans)
+    _ = input()
+    str1 = input()
+    str2 = input()
+    a = 0
+    b = 0
+    ans = 0
+    while a < len(str1) and b < len(str2) :
+        if str1[a] == str2[b] :
+            ans += 1
+            a += 1
+            b += 1
+        else :
+            b += 1
+    
+    print(ans)
+    
 
 if __name__ == "__main__":
     redirect_io()  # Redirect only for local runs
