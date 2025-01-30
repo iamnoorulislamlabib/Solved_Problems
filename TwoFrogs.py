@@ -1,5 +1,4 @@
-# https://codeforces.com/problemset/problem/2055/A
-
+# https://codeforces.com/contest/2053/problem/A
 import sys
 import os
 import math
@@ -21,14 +20,15 @@ def redirect_io():
 
 
 def solve():
+    n = int(input())
     lst = list(map(int,input().split()))
-    n,x,y = lst[0],lst[1],lst[2]
-    dif = abs(x-y)
-    if dif % 2 == 0 :
-        print("YES")
-    else :
-        print("NO")
-        
+    for i in range(n-1) :
+        if 2*lst[i] > lst[i+1] and lst[i] < 2*lst[i+1] :
+            print("YES")
+            return
+    
+    
+    print("NO")          
          
     
 
