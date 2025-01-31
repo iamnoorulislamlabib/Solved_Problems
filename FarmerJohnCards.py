@@ -22,29 +22,20 @@ def redirect_io():
 
 
 def solve():
-    lst = list(map(int,input().split()))
-    n,m = lst[0],lst[1]
-    if n == 1 :
-        print(1)
-        return
-    dictionary = {}
+    n,m=map(int,input().split())
+    mat = []
     for i in range(n) :
-        lst = list(map(int,input().split()))
-        for num in lst :
-            dictionary[num] = i
-    lst = dict(sorted(dictionary.items(),key= lambda item : item[0] ))
-    freq = {}
-    i = 0
-    for value in lst.values() :
-        if i == n :
-            break
-        if freq.get(value,0) == 0 :
-            freq[value] = 0
-        freq[value] += 1
-        if freq[value] == 2 :
-            print(-1)
-            return
-        i += 1
+        temp = list(map(int,input().split()))
+        temp.sort(reverse=False)
+        temp = [i] + temp
+        mat.append(temp)
+    
+    mat = sorted(mat,key=lambda row : row[1])
+    for j in range(1,m+1) :
+        for i in range(0,n-1) :
+            if mat[i][j]>mat[i+1][j] :
+                
+        
     
     
 

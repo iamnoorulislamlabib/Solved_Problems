@@ -51,13 +51,21 @@ void lithium_03(){
     //     cout<<"\n";
     // }
 
-
+    LL mn = -1;
     for(LL j=1;j<=m;j++){
-        for(LL i=0;i<(n-1);i++){
+        if(j!=1){
+            mn = v[n-1][j-1];
+        }
+        for(LL i=0;i<n-1;i++){
+            if(i==0 and v[i][j]<mn){
+                cout<<-1<<"\n";
+                return;
+            }
             if(v[i][j]>v[i+1][j]){
                 cout<<-1<<"\n";
                 return;
             }
+            
         }
     }
 
