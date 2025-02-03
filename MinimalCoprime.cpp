@@ -1,4 +1,4 @@
-// https://codeforces.com/problemset/problem/1706/B
+// https://codeforces.com/contest/2063/problem/A
 
 /*
 B&H
@@ -32,7 +32,23 @@ inline void runtime(clock_t tStart) {
 
 
 void lithium_03(){
-    
+    LL l,r;cin>>l>>r;
+    LL ans = 0;
+    if(l==r && l!=1){
+        cout<<"0\n";
+        return;
+    }
+    if(l==r && l==1){
+        cout<<"1\n";
+        return;
+    }
+
+    if(l==1){
+        ans++;
+        l++;
+    }
+    ans += (r-l);
+    cout<<ans<<"\n";
 }
 
 int main() {
